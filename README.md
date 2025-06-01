@@ -1,18 +1,21 @@
-### 5회차 
+### 3회차 
 ## RAG 실습과 과제 제출을 위한 Repository입니다 
 
 ### 예시 
 
 ```bash
-git clone git@github.com:HateSlop/~~~  # 클론
+git clone ~~~  # 클론
 cd 2-RAG # 프로젝트 루트로 이동
-git checkout -b Hyeonseong # 브랜치 생성 (본인의 브랜치, 폴더 등 생성)
-mkdir Hyeonseong # 개인 폴더 만들기
-cd Hyeonseong # 개인 폴더로 이동
+git checkout -b olavvn # 브랜치 생성 (본인의 브랜치, 폴더 등 생성)
+mkdir olavvn # 개인 폴더 만들기
+cd olavvn # 개인 폴더로 이동
 # 작업을 진행해주세요
+#작업 진행:
+#세션 시간: 기본 RAG
+#과제: 원본 파일 복사하여 Langchain용 실습 파일 만들기(폴더 구조 참고)
 git add . # 작업 후 add
 git commit -m "[feat] ~~" # 커밋
-git push origin Hyeonseong # 오리진에 푸시
+git push origin olavvn # 오리진에 푸시
 ```
 
 ### 폴더구조
@@ -22,6 +25,11 @@ git push origin Hyeonseong # 오리진에 푸시
 ├── source_data
     └── docs1.txt
     └── docs2.txt
+├── olavvn(개인작업폴더)
+    └── build_vector_db.py
+    └── rag_chatbot.py
+    └── build_vector_db_lc.py
+    └── rag_chatbot_lc.py 
 ├── build_vector_db.py
 ├── rag_chatbot.py
 ├── README.md
