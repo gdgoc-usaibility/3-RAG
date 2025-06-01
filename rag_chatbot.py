@@ -19,12 +19,18 @@ def retrieve(query, top_k=3):
 #3) 최종 답변 반환 하는 함수 
 
 def generate_answer_with_context(query, top_k=3):
-    # retrieve 함수로 결과 얻고 
+    results = retrieve(query, top_k) # retrieve 함수로 결과 얻기
     # top_k에 대한 documents와 metadatas 리스트로 추출
-    # do it
+    found_docs = results["documents"][0] 
+    found_metadatas = results["metadatas"][0]
 
-    # context 구성
-    # do it
+    # context 구성 (검색된 문서들을 하나의 문맥으로 결합)
+    context_texts = []
+    # zip을 이용해 두 리스트의 같은 인덱스에 있는 값들을 한 쌍으로 묶음
+    for doc_text, meta in zip(found_docs, found_metadatas): 
+        context_texts.append(f"<<filename: {meta['filename']}>>\n{doc_text}")
+    # context_texts 리스트에 있는 모든 문자열이 \n\n으로 이어 붙여짐
+    context_str = "\n\n".join(context_texts)
 
     # 프롬프트 작성
     system_prompt = """
