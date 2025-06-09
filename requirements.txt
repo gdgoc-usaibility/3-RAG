@@ -1,0 +1,12 @@
+openai
+python-dotenv
+huggingface-hub
+numpy
+pandas
+datasets
+chromadb
+langchain
+tiktoken
+python-dotenv
+unstructured 
+
